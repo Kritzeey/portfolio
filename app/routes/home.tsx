@@ -1,5 +1,10 @@
+import Navbar from "~/components/ui/navbar";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import Welcome from "~/components/views/welcome";
+import About from "~/components/views/about";
+import Techs from "~/components/views/techs";
+import Achievements from "~/components/views/achievements";
+import Footer from "~/components/ui/footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +14,14 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <main>
+      <Navbar />
+      <Welcome />
+      <About />
+      <Techs />
+      <Achievements />
+      <Footer />
+    </main>
+  );
 }
