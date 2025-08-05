@@ -1,5 +1,5 @@
-import Description from "~/pages/about/sections/description";
-import type { Route } from "./+types/about";
+import Description from "./sections/description";
+import type { Route } from "../../pages/about/+types/about";
 import Techs from "./sections/techs";
 import Achievements from "./sections/achievements";
 import Projects from "./sections/projects";
