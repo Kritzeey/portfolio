@@ -3,6 +3,8 @@ import type { Route } from "./+types/contact";
 import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
 import { Button } from "~/components/ui/button";
+import { Link } from "react-router";
+import { Github, Linkedin } from "lucide-react";
 
 const WEB3_FORMS_KEY = process.env.WEB3_FORMS_KEY;
 
@@ -58,10 +60,27 @@ export default function Contact() {
       </form>
 
       <div className="w-full col-span1 flex flex-col">
-        <div className="w-full">
-          <span className="flex w-full text-2xl font-bold p-4 border-2 border-purple-400 rounded-2xl">
+        <div className="w-full p-4 border-2 border-purple-400 rounded-2xl gap-4 flex flex-col">
+          <span className="flex w-full items-center justify-center text-2xl font-bold">
             Connect With Me
           </span>
+
+          <div className="w-full justify-center flex gap-4">
+            <div>
+              <Link to="https://github.com/Kritzeey">
+                <div className="border-2 border-purple-400 rounded-2xl flex items-center justify-center size-16">
+                  <Github className="size-8" />
+                </div>
+              </Link>
+            </div>
+            <div>
+              <Link to="https://www.linkedin.com/in/valhize">
+                <div className="border-2 border-purple-400 rounded-2xl flex items-center justify-center size-16">
+                  <Linkedin />
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </main>
