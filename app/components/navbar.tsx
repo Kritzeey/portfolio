@@ -18,7 +18,6 @@ export default function Navbar() {
 
         <NavLink
           to="/about"
-          end
           className={({ isActive }) =>
             isActive
               ? "border-2 border-transparent transition-all border-b-purple-400"
@@ -30,7 +29,6 @@ export default function Navbar() {
 
         <NavLink
           to="/contact"
-          end
           className={({ isActive }) =>
             isActive
               ? "border-2 border-transparent border-b-purple-400 transition-all"
