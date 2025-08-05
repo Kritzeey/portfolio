@@ -7,8 +7,8 @@ import {
 
 export default [
   layout("layouts/main-layout.tsx", [
-    index("pages/home/home.tsx"),
-    route("about", "pages/about/about.tsx"),
-    route("contact", "pages/contact/contact.tsx"),
+    index("routes/home/home.tsx"),
+    route("about", "routes/about/about.tsx"),
+    route("contact", "routes/contact/contact.tsx"),
   ]),
 ] satisfies RouteConfig;
