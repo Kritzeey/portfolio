@@ -1,11 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import SplitText from "~/components/split-text";
 
 export default function Description() {
   useGSAP(() => {
-    const timeline = gsap.timeline();
+    const timeline1 = gsap.timeline();
+    const timeline2 = gsap.timeline();
 
-    timeline.fromTo(
+    timeline1.fromTo(
       "#profile-image",
       {
         opacity: 0,
@@ -19,13 +21,55 @@ export default function Description() {
       },
     );
 
-    timeline.to("#profile-image", {
+    timeline1.to("#profile-image", {
       y: 20,
       duration: 2,
       ease: "sine.inOut",
       repeat: -1,
       yoyo: true,
     });
+
+    timeline2.fromTo(
+      "#text-one",
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+      },
+    );
+
+    timeline2.fromTo(
+      "#text-two",
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+      },
+    );
+
+    timeline2.fromTo(
+      "#text-three",
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power2.out",
+      },
+    );
   }, []);
 
   return (
@@ -42,17 +86,29 @@ export default function Description() {
         </div>
       </div>
       <div className="col-span-1 flex flex-col gap-4">
-        <span className="text-4xl font-medium">About Me</span>
-        <span className="text-xl">
+        <SplitText
+          text="About Me"
+          className="text-4xl font-bold"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+        />
+        <span id="text-one" className="text-xl">
           👋 Hello there! I am a second year computer science student at
           Universitas Indonesia.
         </span>
-        <span className="text-xl">
-          I like to mess around with both frontend and backend development.
+        <span id="text-two" className="text-xl">
+          🌐 I like to mess around with both frontend and backend development.
         </span>
-        <span className="text-xl">
-          I like learning new things and solving problems! I always strive to be
-          the better version of myself.
+        <span id="text-three" className="text-xl">
+          📖 I like learning new things and solving problems! I always strive to
+          be the better version of myself.
         </span>
       </div>
     </section>
