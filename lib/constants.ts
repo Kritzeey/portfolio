@@ -93,3 +93,20 @@ export const achievements = [
     image: "/ghq.png",
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    image: "/cttr-link.png",
+    title: "cttr.link",
+    description: "Simple and hassle-free URL shortener. Powered by SvelteKit.",
+    link: "https://github.com/Kritzeey/cttr-link",
+  },
+  {
+    id: 2,
+    image: "/ngerti-in.png",
+    title: "Ngerti.in",
+    description: "Your Personal AI Study Tutor.",
+    link: "https://github.com/HeraldoArman/ngerti-in",
+  },
+];
