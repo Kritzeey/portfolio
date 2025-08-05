@@ -7,7 +7,7 @@
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
-    "format": "prettier **/*.{ts,tsx,js,jsx} --write"
+    "format": "prettier **/*.{ts,tsx,js,jsx,css} --write"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

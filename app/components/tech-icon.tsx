@@ -10,7 +10,7 @@ export default function TechIcon({ img, color, link }: Props) {
   return (
     <Link to={link}>
       <div
-        className="col-span-1 border-2 p-2 size-16 rounded-2xl duration-200 cursor-pointer"
+        className="hover:scale-110 transform col-span-1 border-2 p-2 size-16 rounded-2xl duration-200 cursor-pointer"
         style={{ borderColor: color }}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLDivElement).style.boxShadow =
