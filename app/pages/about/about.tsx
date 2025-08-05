@@ -1,5 +1,6 @@
 import Description from "~/pages/about/sections/description";
 import type { Route } from "./+types/about";
+import Techs from "./sections/techs";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,6 +13,7 @@ export default function About() {
   return (
     <main>
       <Description />
+      <Techs />
     </main>
   );
 }
