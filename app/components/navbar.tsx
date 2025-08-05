@@ -6,12 +6,12 @@ export default function Navbar() {
       <div className="backdrop-blur-xl border-2 border-purple-400 rounded-3xl flex w-full h-full justify-between items-center mx-auto max-w-xl px-6">
         <NavLink
           to="/"
-          end
           className={({ isActive }) =>
             isActive
               ? "border-2 border-transparent border-b-purple-400 transition-all"
               : "border-2 border-transparent"
           }
+          end
         >
           Home
         </NavLink>
@@ -23,6 +23,7 @@ export default function Navbar() {
               ? "border-2 border-transparent transition-all border-b-purple-400"
               : "border-2 border-transparent"
           }
+          end
         >
           About
         </NavLink>
@@ -31,9 +32,10 @@ export default function Navbar() {
           to="/contact"
           className={({ isActive }) =>
             isActive
-              ? "border-2 border-transparent border-b-purple-400 transition-all"
+              ? "border-2 border-transparent transition-all border-b-purple-400"
               : "border-2 border-transparent"
           }
+          end
         >
           Contact
         </NavLink>
