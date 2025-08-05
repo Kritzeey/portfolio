@@ -9,7 +9,7 @@ export default function Techs() {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.fromTo(
-      "#fade-in",
+      "#techs",
       {
         opacity: 0,
         y: 40,
@@ -20,7 +20,7 @@ export default function Techs() {
         duration: 1,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: "#fade-in",
+          trigger: "#techs",
           start: "top 80%",
           toggleActions: "play none none none",
         },
@@ -29,14 +29,11 @@ export default function Techs() {
   }, []);
 
   return (
-    <section
-      id="techs"
-      className="bg-gray-900 h-[50dvh] w-full flex flex-col items-center justify-center gap-12"
-    >
-      <span id="fade-in" className="text-4xl font-bold">
+    <section className="bg-gray-900 h-[50dvh] w-full flex flex-col items-center justify-center gap-12">
+      <span id="techs" className="text-4xl font-bold">
         Techs and skills I've used before
       </span>
-      <div id="fade-in" className="grid grid-cols-14 gap-4">
+      <div id="techs" className="grid grid-cols-14 gap-4">
         {techs.map((tech) => (
           <TechIcon
             key={tech.id}
