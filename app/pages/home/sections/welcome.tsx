@@ -2,16 +2,21 @@ import { useEffect } from "react";
 import Orb from "~/components/orb";
 import SplitText from "~/components/split-text";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Welcome() {
-  useEffect(() => {
+  useGSAP(() => {
     gsap.fromTo(
       "#fade-in",
-      { opacity: 0, y: 40 },
+      {
+        opacity: 0,
+        y: 40,
+      },
       {
         opacity: 1,
         y: 0,
         duration: 1,
+
         delay: 0.5,
         ease: "power2.out",
       },
